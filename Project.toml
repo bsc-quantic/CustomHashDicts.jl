@@ -1,0 +1,7 @@
+name = "CustomHashDicts"
+uuid = "01871d8e-bc8c-4519-b8c2-12bc19e84d0f"
+authors = ["Sergio Sánchez Ramírez <sergio.sanchez.ramirez+git@bsc.es>"]
+version = "0.1.0"
+
+[compat]
+julia = "1.10"
