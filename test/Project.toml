@@ -1,0 +1,6 @@
+[deps]
+CustomHashDicts = "01871d8e-bc8c-4519-b8c2-12bc19e84d0f"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[sources]
+CustomHashDicts = {path = "../"}
