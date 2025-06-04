@@ -22,6 +22,9 @@ struct CustomHashDict{K,V,Hash<:Function,IsEqual<:Function} <: AbstractDict{K,V}
 end
 
 CustomHashDict{K,V}() where {K,V} = CustomHashDict{K,V}(hash, isequal)
+function CustomHashDict{K,V,Hash,IsEqual}() where {K,V,Hash,IsEqual}
+    CustomHashDict{K,V,Hash,IsEqual}(Dict{WrapKey{K,Hash,IsEqual},V}(), Hash.instance, IsEqual.instance)
+end
 
 function CustomHashDict{K,V}(hash_f::Hash, isequal_f::IsEqual) where {K,V,Hash,IsEqual}
     CustomHashDict{K,V,Hash,IsEqual}(Dict{WrapKey{K,Hash,IsEqual},V}(), hash_f, isequal_f)
